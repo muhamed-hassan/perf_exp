@@ -18,7 +18,7 @@ public class RestTemplateUtil extends BaseUtil<Integer> {
 
     @Override
     public Integer getData(int delay) {
-        return restTemplate.getForEntity("http://localhost:" + serverPort + "/data?delay=" + delay, Integer.class)
+        return restTemplate.getForEntity(String.format(URI_TEMPLATE, serverPort, delay), Integer.class)
                             .getBody();
     }
 

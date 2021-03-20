@@ -11,7 +11,7 @@ import com.exp.configs.WebClientUtil;
 import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;
 
-public class WebClientIT extends BaseIT {
+class WebClientIT extends BaseIT {
 
     @Autowired
     private WebClientUtil webClientUtil;

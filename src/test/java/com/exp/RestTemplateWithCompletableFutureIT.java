@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.exp.configs.RestTemplateUtil;
 
-public class RestTemplateWithCompletableFutureIT extends BaseIT {
+class RestTemplateWithCompletableFutureIT extends BaseIT {
 
     @Autowired
     private RestTemplateUtil restTemplateUtil;

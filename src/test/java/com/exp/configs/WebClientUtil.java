@@ -24,7 +24,7 @@ public class WebClientUtil extends BaseUtil<Mono<Integer>> {
     @Override
     public Mono<Integer> getData(int delay) {
         return webClient.get()
-                        .uri("http://localhost:" + serverPort + "data?delay=" + delay)
+                        .uri(String.format(URI_TEMPLATE, serverPort, delay))
                         .retrieve()
                         .bodyToMono(Integer.class);
     }
