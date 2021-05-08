@@ -15,7 +15,7 @@ class RestTemplateIT extends BaseIT {
 
     @Timeout(value = 10300, unit = TimeUnit.MILLISECONDS)
     @Test
-    void testDataFetchingSequentially() {
+    void shouldFetchDataSequentially() {
         var r1 = restTemplateUtil.getData(2);
         var r2 = restTemplateUtil.getData(5);
         var r3 = restTemplateUtil.getData(3);

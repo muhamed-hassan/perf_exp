@@ -17,7 +17,7 @@ class RestTemplateWithCompletableFutureIT extends BaseIT {
 
     @Timeout(value = 5200, unit = TimeUnit.MILLISECONDS)
     @Test
-    void testDataFetchingUsingCompletableFutureAndCustomThreadPool() throws InterruptedException {
+    void shouldFetchDataInParallelWhenUsingCompletableFutureAndCustomThreadPool() throws InterruptedException {
         var pool = new ForkJoinPool(Runtime.getRuntime().availableProcessors());
 
         var f1 = CompletableFuture
@@ -37,7 +37,7 @@ class RestTemplateWithCompletableFutureIT extends BaseIT {
 
     @Timeout(value = 5200, unit = TimeUnit.MILLISECONDS)
     @Test
-    void testDataFetchingUsingCompletableFutureAndCommonForkJoinPool() {
+    void shouldFetchDataInParallelWhenUsingCompletableFutureAndCommonForkJoinPool() {
         var f1 = CompletableFuture
             .supplyAsync(() -> restTemplateUtil.getData(2));
         var f2 = CompletableFuture

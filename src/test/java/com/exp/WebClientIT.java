@@ -18,7 +18,7 @@ class WebClientIT extends BaseIT {
 
     @Timeout(value = 5400, unit = TimeUnit.MILLISECONDS)
     @Test
-    void testDataFetchingUsingReactiveWebClient() throws Exception {
+    void shouldFetchDataInParallelWhenUsingReactiveWebClient() throws Exception {
         var countDownLatch = new CountDownLatch(1);
 
         Flux.merge(webClientUtil.getData(2), webClientUtil.getData(5), webClientUtil.getData(3))
